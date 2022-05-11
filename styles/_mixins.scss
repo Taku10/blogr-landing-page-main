@@ -1,0 +1,100 @@
+@mixin ct-button-white {
+    background-color:$white;
+    color:$cta-text;
+    border: none;
+    border-radius:2rem;
+    width:8rem;
+    height: 3rem;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top:-1rem;
+    font-weight:700;
+    font-size:1rem;
+}
+
+@mixin ct-button-red {
+    background-color:$cta-hover-background;
+    color:$white;
+    border: none;
+    border-radius:2rem;
+    width:8rem;
+    height:3rem;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top:-1rem;
+    font-weight:700;
+    font-size:1rem;
+}
+
+@mixin ct-button-transparent {
+    background-color:transparent;
+    color:$white;
+    border: 1px solid white;
+    border-radius:2rem;
+    width:8rem;
+    height:3rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight:700;
+    font-size:1rem;
+}
+
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+@mixin arrow{
+    height: 0.6rem;
+    width: 0.7rem;
+    margin-top: 0.22rem;
+    margin-left: 1rem;
+}
+
+@mixin header{
+    font-family: 'Overpass', sans-serif;
+    font-size: 2.8rem;
+    color: $headings-dark-blue;
+}
+
+@mixin sub-header{
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.8rem;
+    color:$headings-dark-blue;
+}
+
+@mixin body-text {
+    line-height: 1.5;
+    font-size: 1.1rem;
+    color: $body-text; 
+}
+
+@mixin footer-link{
+    color:white;
+    font-size: 1.1rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight:500;
+}
+
+@mixin details{
+    width: 12rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    font-weight:500;
+    color:$body-text;
+    @include flex-column;
+    gap:1.2rem;
+    margin-top:2rem;
+    height: 14rem;
+}
+
+@mixin footer-nav-hover {
+text-decoration: underline;
+}

@@ -1,0 +1,31 @@
+@import "./mixins";
+ .bottom-container {
+     height: 60rem;
+     margin-top:5rem;
+     @include grid();
+     .laptop{
+         img{
+             position: absolute;
+             margin-left:-17rem;
+         }
+     }
+     .features{
+         height: 28rem;
+         @include flex-column();
+         gap:3rem;
+         margin-top:13rem;
+         .free{
+             h2{
+                 @include sub-header();
+             }
+             p{
+                 @include body-text();
+                 margin-right: 18rem;
+                 margin-top: 2rem;
+             }
+         }
+         .tooling{
+             @extend .free;
+         }
+     }
+ }

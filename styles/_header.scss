@@ -1,0 +1,182 @@
+
+@import "./mixins";
+
+
+header {
+    background: url("/images/bg-pattern-intro-desktop.svg"), linear-gradient(to left, $light-red, $very-light-red);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position:  20% center;
+    height: 35rem;
+    border-bottom-left-radius: 9rem;
+    nav{ 
+        @include flex-row();
+        justify-content: space-between;
+        height: 5rem;
+        padding: 3rem;
+        .logo{
+            margin-left:10%;
+        }
+        .nav-items {                    //main nav links on navbar, productm company and connect
+            @include flex-row();
+            justify-content: space-between;
+            width: 29%;
+            font-family: 'Ubuntu', sans-serif;
+            margin-left:-13rem;
+            margin-top:0.5rem;
+            .product-wrapper, .company-wrapper, .connect-wrapper { //dropdown wrapper
+                @include flex-row();
+                img{
+                   @include arrow();
+                   transition: transform 0.5s ease-in-out;
+                }
+            }
+
+            .rotate-arrow {
+                transform: rotate(180deg);
+                
+            }
+
+
+            .company-wrapper { 
+                img{
+                    margin-left:1rem;
+                }
+            }
+
+            .product, .company, .connect{           //dropdown starts here
+                list-style: none;
+                cursor: pointer;
+                color: $nav; 
+                &:hover{
+                    text-decoration:underline;
+                }
+                .product-items, .company-items, .connect-items{
+                    background-color: white;
+                    width: 9rem;
+                    height: 12rem;
+                    position: absolute;
+                    margin-top: 2rem;
+                    color: black;
+                    border-radius: 0.5rem;
+                    display: none;
+                  
+                    li{
+                        list-style: none;
+                        margin-top: 1rem;
+                        margin-left: 1rem;
+                        &:hover{
+                            font-weight:600 ;
+                            cursor:pointer;
+                        }
+                    }
+                }
+
+                .company-items{
+                    height: 10rem;
+                }
+
+                .connect-items {
+                    height: 7rem;
+                }
+                 
+               
+                
+                .product-items.active {
+                   display: block; 
+                }
+
+                .company-items.active {
+                    display: block; 
+                 }
+
+                 .connect-items.active {
+                    display: block; 
+                 }
+
+                a {
+                    text-decoration: none;
+                    color: $nav;
+                }
+            }
+
+           
+        }
+        // Login and Sign 
+        .account {
+            @include flex-row();
+            justify-content: space-between;
+            width: 14%;
+            margin-right: 15%;
+            font-family: 'Ubuntu', sans-serif;
+            margin-top:0.5rem;
+            .login, .sign-up{
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    color:$nav;
+                }
+                
+            }
+
+            .login{
+                &:hover{
+                    text-decoration:underline;
+                }
+            }
+
+            .sign-up{
+                @include ct-button-white();
+                cursor: pointer;
+                &:hover{
+                    @include ct-button-red;
+                }
+
+            }
+        }
+    }
+    .intro {                            //h1, p and two buttons
+        @include flex-column();
+        align-items: center;
+        gap: 2rem;
+        margin-top: 6rem;
+        margin-left: 15rem;
+        width: 66rem;
+        height: 20rem;
+        h1{
+            font-family: 'Overpass', sans-serif;
+            color: white;
+            font-size: 4rem;
+        }
+        p{
+            color:$nav;
+            font-size:1.5rem;
+        }
+        .buttons{
+            @include flex-row();
+            justify-content: space-between;
+            width:27%;
+            height:5rem;
+            .start{
+                @include ct-button-white();
+                margin-top: 0rem;
+                cursor: pointer;
+                &:hover{
+                    @include ct-button-red();
+                    margin-top:0rem;
+                }
+            }
+            .learn{
+                @include ct-button-transparent();
+                cursor: pointer;
+                &:hover{
+                    @include ct-button-white();
+                    margin-top:0rem;
+                }
+            }
+        }
+    }
+
+}
+
+

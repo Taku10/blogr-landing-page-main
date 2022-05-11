@@ -1,0 +1,67 @@
+@import "./mixins";
+
+footer{
+    height: 25rem;
+    background-color: $footer-background;
+    border-top-right-radius: 8rem;
+    .footer-nav{
+        height: 100%;
+        @include flex-row;
+        gap:12rem;
+        padding-top:5rem;
+        margin-left: 10%;
+        .footer-nav-items{
+            @include flex-row();
+            justify-content: space-between;
+            width: 60%;
+            .product-footer{
+                .product-link{
+                    @include footer-link();
+                    
+                }
+                .product-details{
+                   @include details();
+                   .drop-link{
+                       cursor:pointer;
+                       &:hover{
+                        @include footer-nav-hover();
+                       }
+                       
+                   }
+                }
+            }
+            .company-footer{
+                .company-link{
+                    @include footer-link();
+                    
+                }
+                .company-details{
+                    @include details();
+                    .drop-link{
+                        cursor:pointer;
+                        &:hover{
+                         @include footer-nav-hover();
+                        }
+                        
+                    }
+                }
+            }
+            .connect-footer{
+                .connect-link{
+                    @include footer-link();
+                }
+                .connect-details{
+                    @include details();
+                    .drop-link{
+                        cursor:pointer;
+                        &:hover{
+                         @include footer-nav-hover();
+                        }
+                        
+                    }
+                }
+            }
+            
+        }
+    }
+}
