@@ -35,6 +35,12 @@ header nav .logo {
   margin-left: 10%;
 }
 
+@media (max-width: 992px) {
+  header nav .logo {
+    margin-left: 2%;
+  }
+}
+
 header nav .nav-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,6 +56,13 @@ header nav .nav-items {
   font-family: 'Ubuntu', sans-serif;
   margin-left: -13rem;
   margin-top: 0.5rem;
+}
+
+@media (max-width: 992px) {
+  header nav .nav-items {
+    width: 42%;
+    margin-left: -5rem;
+  }
 }
 
 header nav .nav-items .product-wrapper, header nav .nav-items .company-wrapper, header nav .nav-items .connect-wrapper {
@@ -103,6 +116,12 @@ header nav .nav-items .product .product-items, header nav .nav-items .product .c
   display: none;
 }
 
+@media (max-width: 992px) {
+  header nav .nav-items .product .product-items, header nav .nav-items .product .company-items, header nav .nav-items .product .connect-items, header nav .nav-items .company .product-items, header nav .nav-items .company .company-items, header nav .nav-items .company .connect-items, header nav .nav-items .connect .product-items, header nav .nav-items .connect .company-items, header nav .nav-items .connect .connect-items {
+    width: 8rem;
+  }
+}
+
 header nav .nav-items .product .product-items li, header nav .nav-items .product .company-items li, header nav .nav-items .product .connect-items li, header nav .nav-items .company .product-items li, header nav .nav-items .company .company-items li, header nav .nav-items .company .connect-items li, header nav .nav-items .connect .product-items li, header nav .nav-items .connect .company-items li, header nav .nav-items .connect .connect-items li {
   list-style: none;
   margin-top: 1rem;
@@ -154,6 +173,21 @@ header nav .account {
   margin-right: 15%;
   font-family: 'Ubuntu', sans-serif;
   margin-top: 0.5rem;
+}
+
+@media (max-width: 1300px) {
+  header nav .account {
+    width: 20%;
+    margin-right: 5%;
+  }
+}
+
+@media (max-width: 992px) {
+  header nav .account {
+    width: 25%;
+    margin-right: 1%;
+    width: 22%;
+  }
 }
 
 header nav .account .login, header nav .account .sign-up {
@@ -214,10 +248,28 @@ header .intro {
   height: 20rem;
 }
 
+@media (max-width: 1300px) {
+  header .intro {
+    margin-left: 8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  header .intro {
+    margin-left: -2rem;
+  }
+}
+
 header .intro h1 {
   font-family: 'Overpass', sans-serif;
   color: white;
   font-size: 4rem;
+}
+
+@media (max-width: 992px) {
+  header .intro h1 {
+    font-size: 3.5rem;
+  }
 }
 
 header .intro p {
@@ -312,6 +364,12 @@ body {
           flex-direction: column;
 }
 
+@media (max-width: 992px) {
+  .design-container {
+    margin-top: -5rem;
+  }
+}
+
 .design-container h1 {
   font-family: 'Overpass', sans-serif;
   font-size: 2.8rem;
@@ -320,6 +378,18 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+@media (max-width: 1300px) {
+  .design-container h1 {
+    margin-left: -15rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .design-container h1 {
+    font-size: 2.4rem;
+  }
 }
 
 .design-container .division {
@@ -343,6 +413,12 @@ body {
   height: 30rem;
 }
 
+@media (max-width: 992px) {
+  .design-container .division .content {
+    margin-left: 5%;
+  }
+}
+
 .design-container .division .content .content-top, .design-container .division .content .content-bottom {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -356,6 +432,12 @@ body {
   color: #1f3f5b;
 }
 
+@media (max-width: 992px) {
+  .design-container .division .content .content-top h2, .design-container .division .content .content-bottom h2 {
+    font-size: 1.5rem;
+  }
+}
+
 .design-container .division .content .content-top p, .design-container .division .content .content-bottom p {
   line-height: 1.5;
   font-size: 1.1rem;
@@ -366,6 +448,20 @@ body {
   position: absolute;
   margin-left: 8rem;
   margin-top: -12rem;
+}
+
+@media (max-width: 1300px) {
+  .design-container .division .editor-image img {
+    width: 50rem;
+    margin-left: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .design-container .division .editor-image img {
+    width: 40rem;
+    margin-top: -8rem;
+  }
 }
 
 .infra {
@@ -383,14 +479,47 @@ body {
   border-top-right-radius: 6rem;
 }
 
+@media (max-width: 992px) {
+  .infra {
+    height: 20rem;
+  }
+}
+
 .infra .phones img {
   position: absolute;
   margin-top: -5rem;
   margin-left: 7rem;
 }
 
+@media (max-width: 1300px) {
+  .infra .phones img {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .infra .phones img {
+    width: 27rem;
+    margin-top: -3rem;
+  }
+}
+
 .infra .infra-details .info {
   margin-top: 8rem;
+}
+
+@media (max-width: 1300px) {
+  .infra .infra-details .info {
+    margin-left: 1rem;
+    margin-top: 8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .infra .infra-details .info {
+    margin-top: 4rem;
+    margin-left: -2rem;
+  }
 }
 
 .infra .infra-details .info h2 {
@@ -401,12 +530,30 @@ body {
   font-size: 2.3rem;
 }
 
+@media (max-width: 992px) {
+  .infra .infra-details .info h2 {
+    font-size: 2rem;
+  }
+}
+
 .infra .infra-details .info p {
   line-height: 1.5;
   font-size: 1.1rem;
   color: #4b5862;
   color: #f0ebeb;
   margin-right: 15rem;
+}
+
+@media (max-width: 1300px) {
+  .infra .infra-details .info p {
+    margin-right: 8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .infra .infra-details .info p {
+    margin-right: 4rem;
+  }
 }
 
 .bottom-container {
@@ -423,6 +570,18 @@ body {
   margin-left: -17rem;
 }
 
+@media (max-width: 1300px) {
+  .bottom-container .laptop img {
+    width: 55rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .bottom-container .laptop img {
+    width: 50rem;
+  }
+}
+
 .bottom-container .features {
   height: 28rem;
   display: -webkit-box;
@@ -434,6 +593,19 @@ body {
           flex-direction: column;
   gap: 3rem;
   margin-top: 13rem;
+}
+
+@media (max-width: 1300px) {
+  .bottom-container .features {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .bottom-container .features {
+    margin-top: 10rem;
+    margin-left: 2rem;
+  }
 }
 
 .bottom-container .features .free h2, .bottom-container .features .tooling h2 {
@@ -448,6 +620,12 @@ body {
   color: #4b5862;
   margin-right: 18rem;
   margin-top: 2rem;
+}
+
+@media (max-width: 1300px) {
+  .bottom-container .features .free p, .bottom-container .features .tooling p {
+    margin-right: 5rem;
+  }
 }
 
 footer {

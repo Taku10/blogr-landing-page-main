@@ -1,5 +1,6 @@
 
 @import "./mixins";
+@import "./media";
 
 
 header {
@@ -16,6 +17,11 @@ header {
         padding: 3rem;
         .logo{
             margin-left:10%;
+            @include respond(laptop){
+             margin-left:2%;   
+            }
+            
+            
         }
         .nav-items {                    //main nav links on navbar, productm company and connect
             @include flex-row();
@@ -24,6 +30,10 @@ header {
             font-family: 'Ubuntu', sans-serif;
             margin-left:-13rem;
             margin-top:0.5rem;
+            @include respond(laptop){
+             width:42%;
+             margin-left:-5rem;   
+            }
             .product-wrapper, .company-wrapper, .connect-wrapper { //dropdown wrapper
                 @include flex-row();
                 img{
@@ -60,6 +70,9 @@ header {
                     color: black;
                     border-radius: 0.5rem;
                     display: none;
+                    @include respond(laptop){
+                        width:8rem;
+                    }
                   
                     li{
                         list-style: none;
@@ -110,6 +123,15 @@ header {
             margin-right: 15%;
             font-family: 'Ubuntu', sans-serif;
             margin-top:0.5rem;
+            @include respond(desktop){
+                width:20%;
+                margin-right: 5%;
+            }
+            @include respond(laptop){
+                width:25%;
+                margin-right:1%;
+                width:22%;
+            }
             .login, .sign-up{
                 list-style: none;
                 a {
@@ -143,10 +165,19 @@ header {
         margin-left: 15rem;
         width: 66rem;
         height: 20rem;
+        @include respond(desktop){
+            margin-left:8rem;
+        }
+        @include respond(laptop){
+            margin-left:-2rem;        
+        }
         h1{
             font-family: 'Overpass', sans-serif;
             color: white;
             font-size: 4rem;
+            @include respond(laptop){
+                font-size:3.5rem;
+            }
         }
         p{
             color:$nav;

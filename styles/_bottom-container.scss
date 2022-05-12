@@ -7,6 +7,12 @@
          img{
              position: absolute;
              margin-left:-17rem;
+             @include respond(desktop){
+                 width:55rem;
+             }
+             @include respond(laptop){
+             width:50rem;   
+            }
          }
      }
      .features{
@@ -14,6 +20,13 @@
          @include flex-column();
          gap:3rem;
          margin-top:13rem;
+         @include respond(desktop){
+             margin-left:2rem;
+         }
+         @include respond(laptop){
+         margin-top:10rem;
+         margin-left:2rem;       
+        }
          .free{
              h2{
                  @include sub-header();
@@ -22,6 +35,9 @@
                  @include body-text();
                  margin-right: 18rem;
                  margin-top: 2rem;
+                 @include respond(desktop){
+                     margin-right:5rem;
+                 }
              }
          }
          .tooling{

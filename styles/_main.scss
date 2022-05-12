@@ -7,11 +7,19 @@ overflow-x:hidden;
     width: 100%;
     height: 70rem;
     @include flex-column();
+    @include respond(laptop){
+     margin-top:-5rem;           
+    }
     h1{
         @include header();
         margin-top:12rem;
         align-self: center;
-        
+        @include respond(desktop){
+            margin-left:-15rem;
+        }
+        @include respond(laptop){
+         font-size:2.4rem;       
+        }
     }
     .division{
         @include grid();
@@ -21,14 +29,22 @@ overflow-x:hidden;
             @include flex-column();
             gap:6rem;
             height:30rem;
+            @include respond(laptop){
+             margin-left:5%;   
+            }
             .content-top{
                 width:fit-content;
                 margin-left:10%;
                 h2{
                     @include sub-header();
+                    @include respond(laptop){
+                        font-size:1.5rem;
+                    }
+                    
                 }
                 p{
                     @include body-text();
+                    
                 }
                 
             }
@@ -42,6 +58,14 @@ overflow-x:hidden;
                 position: absolute;
                 margin-left:8rem;
                 margin-top:-12rem;
+                @include respond(desktop){
+                    width:50rem;
+                    margin-left:3rem;
+                }
+                @include respond(laptop){
+                width:40rem;
+                margin-top:-8rem;
+                }
             }
         }
     }

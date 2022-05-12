@@ -9,28 +9,56 @@
     height: 25rem;
     border-bottom-left-radius: 6rem;
     border-top-right-radius: 6rem;
+    @include respond(laptop){
+     height: 20rem;           
+    }
     .phones{
         img{
             position: absolute;
             margin-top:-5rem;
             margin-left:7rem;
+            @include respond(desktop){
+                margin-left: 1rem;
+            }
+            @include respond(laptop){
+             width:27rem; 
+             margin-top:-3rem;  
+            }
         }
         
     }
     .infra-details{
         .info{
             margin-top:8rem;
+            @include respond(desktop){
+                margin-left:1rem;
+                margin-top:8rem;
+            }
+            @include respond(laptop){
+             margin-top: 4rem;
+             margin-left:-2rem;   
+            }
             
             h2{
                 @include sub-header();
                 color: white;
                 font-size: 2.3rem;
+                @include respond(laptop){
+                font-size:2rem;
+                }
                 
             }
             p{
                 @include body-text();
                 color: $nav;
                 margin-right: 15rem;
+                @include respond(desktop){
+                    margin-right: 8rem;
+                    
+                }
+                @include respond(laptop){
+                    margin-right:4rem;
+                }
             }
         }
     }
