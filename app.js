@@ -2,9 +2,9 @@ const product = document.querySelector(".product");
 const company = document.querySelector(".company");
 const connect = document.querySelector(".connect");
 
-const com_Arrow = document.querySelector(".company-wrapper img");
-const prod_Arrow = document.querySelector(".product-wrapper img");
-const connect_Arrow = document.querySelector(".connect-wrapper img");
+const com_Arrow = document.querySelector(".light-arrow");
+const prod_Arrow = document.querySelector(".light-arrow");
+const connect_Arrow = document.querySelector(".light-arrow");
 
 
 const productItems = document.querySelector(".product-items");

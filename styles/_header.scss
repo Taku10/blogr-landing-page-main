@@ -44,17 +44,27 @@ header {
                width:80%;
                @include flex-column();
                align-items:center;
+               justify-content: center;
+               gap:rem;
                
                
             }
             .product-wrapper, .company-wrapper, .connect-wrapper { //dropdown wrapper
                 @include flex-row();
-                img{
+                .light-arrow{
                    @include arrow();
                    transition: transform 0.5s ease-in-out;
-                   @include respond(laptop){
-
+                  @include respond(tablet){
+                      background-color:red;
+                      display: none;
+                  }
                 }
+                .dark-arrow{
+                    display: none;
+                    @include respond(tablet){
+                        display: block;
+                        @include arrow();
+                    }
                 }
             }
 
@@ -65,7 +75,7 @@ header {
 
 
             .company-wrapper { 
-                img{
+                .light-arrow{
                     margin-left:1rem;
                 }
             }
