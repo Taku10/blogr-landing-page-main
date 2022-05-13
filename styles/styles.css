@@ -65,6 +65,27 @@ header nav .nav-items {
   }
 }
 
+@media (max-width: 768px) {
+  header nav .nav-items {
+    position: absolute;
+    margin-top: 4rem;
+    margin-left: 4%;
+    background-color: white;
+    height: 30rem;
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 header nav .nav-items .product-wrapper, header nav .nav-items .company-wrapper, header nav .nav-items .connect-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -103,6 +124,12 @@ header nav .nav-items .product, header nav .nav-items .company, header nav .nav-
 
 header nav .nav-items .product:hover, header nav .nav-items .company:hover, header nav .nav-items .connect:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  header nav .nav-items .product, header nav .nav-items .company, header nav .nav-items .connect {
+    color: #4b5862;
+  }
 }
 
 header nav .nav-items .product .product-items, header nav .nav-items .product .company-items, header nav .nav-items .product .connect-items, header nav .nav-items .company .product-items, header nav .nav-items .company .company-items, header nav .nav-items .company .connect-items, header nav .nav-items .connect .product-items, header nav .nav-items .connect .company-items, header nav .nav-items .connect .connect-items {

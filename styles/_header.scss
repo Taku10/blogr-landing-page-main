@@ -34,11 +34,27 @@ header {
              width:42%;
              margin-left:-5rem;   
             }
+
+            @include respond(tablet){
+               position: absolute; 
+               margin-top:4rem;
+               margin-left:4%;
+               background-color:white;
+               height: 30rem;
+               width:80%;
+               @include flex-column();
+               align-items:center;
+               
+               
+            }
             .product-wrapper, .company-wrapper, .connect-wrapper { //dropdown wrapper
                 @include flex-row();
                 img{
                    @include arrow();
                    transition: transform 0.5s ease-in-out;
+                   @include respond(laptop){
+
+                }
                 }
             }
 
@@ -61,6 +77,9 @@ header {
                 &:hover{
                     text-decoration:underline;
                 }
+                @include respond(tablet){
+                color: $body-text;
+                }
                 .product-items, .company-items, .connect-items{
                     background-color: white;
                     width: 9rem;
@@ -78,6 +97,7 @@ header {
                         list-style: none;
                         margin-top: 1rem;
                         margin-left: 1rem;
+                        
                         &:hover{
                             font-weight:600 ;
                             cursor:pointer;
