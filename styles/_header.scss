@@ -44,13 +44,18 @@ header {
                width:80%;
                @include flex-column();
                align-items:center;
-               justify-content: center;
-               gap:rem;
+               justify-content: start;
+               gap:3rem;
+               padding-top: 3rem;
                
                
             }
             .product-wrapper, .company-wrapper, .connect-wrapper { //dropdown wrapper
                 @include flex-row();
+                @include respond(tablet){
+                    width: 100%;
+                    justify-content: center;
+                }   
                 .light-arrow{
                    @include arrow();
                    transition: transform 0.5s ease-in-out;
@@ -61,17 +66,22 @@ header {
                 }
                 .dark-arrow{
                     display: none;
+                    transition: transform 0.5s ease-in-out;
                     @include respond(tablet){
                         display: block;
                         @include arrow();
+
                     }
                 }
             }
+    
 
             .rotate-arrow {
                 transform: rotate(180deg);
-                
+               
             }
+
+           
 
 
             .company-wrapper { 
@@ -89,6 +99,8 @@ header {
                 }
                 @include respond(tablet){
                 color: $body-text;
+                font-size: 1.4rem;
+                   
                 }
                 .product-items, .company-items, .connect-items{
                     background-color: white;
@@ -99,8 +111,15 @@ header {
                     color: black;
                     border-radius: 0.5rem;
                     display: none;
+                    
                     @include respond(laptop){
                         width:8rem;
+                    }
+                    @include respond(tablet){
+                        position: static;
+                        border: 1px solid;
+                       
+                        
                     }
                   
                     li{
@@ -128,6 +147,8 @@ header {
                 .product-items.active {
                    display: block; 
                 }
+                
+                
 
                 .company-items.active {
                     display: block; 
