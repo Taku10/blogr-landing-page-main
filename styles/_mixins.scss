@@ -36,6 +36,18 @@
     font-size:1rem;
 }
 
+@mixin ct-button-gradient{
+    background-image: linear-gradient(to left, $light-red, $very-light-red);
+    color:$white;
+    border: none;
+    border-radius:1.5rem;
+    width:8rem;
+    height:3rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight:700;
+    font-size:1rem;
+}
+
 @mixin flex-row{
     display: flex;
     flex-direction: row;
@@ -88,7 +100,7 @@
     font-family: 'Ubuntu', sans-serif;
     font-size: 1rem;
     font-weight:500;
-    color:$body-text;
+    color:$footer-text;
     @include flex-column;
     gap:1.2rem;
     margin-top:2rem;

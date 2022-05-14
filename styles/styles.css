@@ -166,6 +166,12 @@ header nav .nav-items .product:hover, header nav .nav-items .company:hover, head
 }
 
 @media (max-width: 768px) {
+  header nav .nav-items .product:hover, header nav .nav-items .company:hover, header nav .nav-items .connect:hover {
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 768px) {
   header nav .nav-items .product, header nav .nav-items .company, header nav .nav-items .connect {
     color: #4b5862;
     font-size: 1.4rem;
@@ -192,7 +198,11 @@ header nav .nav-items .product .product-items, header nav .nav-items .product .c
 @media (max-width: 768px) {
   header nav .nav-items .product .product-items, header nav .nav-items .product .company-items, header nav .nav-items .product .connect-items, header nav .nav-items .company .product-items, header nav .nav-items .company .company-items, header nav .nav-items .company .connect-items, header nav .nav-items .connect .product-items, header nav .nav-items .connect .company-items, header nav .nav-items .connect .connect-items {
     position: static;
-    border: 1px solid;
+    width: 20rem;
+    height: 14rem;
+    color: #4b5862;
+    background-color: #e2e2e2;
+    font-size: 1.2rem;
   }
 }
 
@@ -207,24 +217,57 @@ header nav .nav-items .product .product-items li:hover, header nav .nav-items .p
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  header nav .nav-items .product .product-items li:hover, header nav .nav-items .product .company-items li:hover, header nav .nav-items .product .connect-items li:hover, header nav .nav-items .company .product-items li:hover, header nav .nav-items .company .company-items li:hover, header nav .nav-items .company .connect-items li:hover, header nav .nav-items .connect .product-items li:hover, header nav .nav-items .connect .company-items li:hover, header nav .nav-items .connect .connect-items li:hover {
+    font-weight: 300;
+  }
+}
+
 header nav .nav-items .product .company-items, header nav .nav-items .company .company-items, header nav .nav-items .connect .company-items {
-  height: 10rem;
+  height: 11rem;
 }
 
 header nav .nav-items .product .connect-items, header nav .nav-items .company .connect-items, header nav .nav-items .connect .connect-items {
-  height: 7rem;
+  height: 9rem;
 }
 
 header nav .nav-items .product .product-items.active, header nav .nav-items .company .product-items.active, header nav .nav-items .connect .product-items.active {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header nav .nav-items .product .company-items.active, header nav .nav-items .company .company-items.active, header nav .nav-items .connect .company-items.active {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header nav .nav-items .product .connect-items.active, header nav .nav-items .company .connect-items.active, header nav .nav-items .connect .connect-items.active {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header nav .nav-items .product a, header nav .nav-items .company a, header nav .nav-items .connect a {
@@ -261,6 +304,12 @@ header nav .account {
     width: 25%;
     margin-right: 1%;
     width: 22%;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav .account {
+    display: none;
   }
 }
 
@@ -302,6 +351,56 @@ header nav .account .sign-up:hover {
   margin-top: -1rem;
   font-weight: 700;
   font-size: 1rem;
+}
+
+header nav .account-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header nav .account-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+    height: 20rem;
+    padding-top: 2rem;
+    width: 80%;
+    border-top: 1px solid #e2e2e2;
+  }
+}
+
+header nav .account-mobile .login-mobile {
+  list-style: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+header nav .account-mobile .login-mobile a {
+  text-decoration: none;
+  color: #1f3f5b;
+  font-family: 'Overpass', sans-serif;
+}
+
+header nav .account-mobile .sign-up-mobile {
+  background-image: -webkit-gradient(linear, right top, left top, from(#ff3d54), to(#ff8f70));
+  background-image: linear-gradient(to left, #ff3d54, #ff8f70);
+  color: white;
+  border: none;
+  border-radius: 1.5rem;
+  width: 8rem;
+  height: 3rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 header .intro {
@@ -748,7 +847,7 @@ footer .footer-nav .footer-nav-items .product-footer .product-details {
   font-family: 'Ubuntu', sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color: #4b5862;
+  color: #c8c8cb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -781,7 +880,7 @@ footer .footer-nav .footer-nav-items .company-footer .company-details {
   font-family: 'Ubuntu', sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color: #4b5862;
+  color: #c8c8cb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -814,7 +913,7 @@ footer .footer-nav .footer-nav-items .connect-footer .connect-details {
   font-family: 'Ubuntu', sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color: #4b5862;
+  color: #c8c8cb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

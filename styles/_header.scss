@@ -96,6 +96,9 @@ header {
                 color: $nav; 
                 &:hover{
                     text-decoration:underline;
+                    @include respond(tablet){
+                        text-decoration:none;
+                    }
                 }
                 @include respond(tablet){
                 color: $body-text;
@@ -116,9 +119,13 @@ header {
                         width:8rem;
                     }
                     @include respond(tablet){
+                        
                         position: static;
-                        border: 1px solid;
-                       
+                        width: 20rem;
+                        height:14rem;
+                        color: $body-text;
+                        background-color: rgb(226, 226, 226);
+                        font-size:1.2rem;
                     }
                   
                     li{
@@ -129,32 +136,39 @@ header {
                         &:hover{
                             font-weight:600 ;
                             cursor:pointer;
+                            @include respond(tablet){
+                                font-weight:300 ;
+                            }
                         }
                     }
                 }
 
                 .company-items{
-                    height: 10rem;
+                    height: 11rem;
                 }
 
                 .connect-items {
-                    height: 7rem;
+                    height: 9rem;
+
                 }
                  
                
                 
                 .product-items.active {
-                   display: block; 
+                    @include flex-column();
+                    align-items:center; 
                 }
                 
                 
 
                 .company-items.active {
-                    display: block; 
+                    @include flex-column();
+                    align-items:center; 
                  }
 
                  .connect-items.active {
-                    display: block; 
+                    @include flex-column();
+                    align-items:center; 
                  }
 
                 a {
@@ -182,6 +196,10 @@ header {
                 margin-right:1%;
                 width:22%;
             }
+
+            @include respond(tablet){
+                display: none;
+            }
             .login, .sign-up{
                 list-style: none;
                 a {
@@ -204,6 +222,34 @@ header {
                     @include ct-button-red;
                 }
 
+            }
+        }
+        .account-mobile{
+            display: none;
+            @include respond(tablet){
+                @include flex-column;
+                align-items: center;
+                gap:1rem;
+                height: 20rem;
+                padding-top:2rem;
+                width:80%;
+                border-top: 1px solid rgb(226, 226, 226);
+            }
+            .login-mobile{
+                list-style: none;
+                font-size: 1.4rem;
+                font-weight: 600;
+                a {
+                    text-decoration: none;
+                    color:$headings-dark-blue;
+                    font-family: 'Overpass', sans-serif;
+                }
+                
+            }
+
+            .sign-up-mobile{
+                @include ct-button-gradient();
+                cursor:pointer;
             }
         }
     }
