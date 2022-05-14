@@ -65,7 +65,7 @@ const menuConfig = ()=>{
     }
 }
 
-menuConfig();
+
 
 //event listeners for clicking
 product.addEventListener("click", (dropProduct))
