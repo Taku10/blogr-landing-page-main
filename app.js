@@ -56,14 +56,11 @@ const closeMenu = ()=>{    //close menu
 }
 
 
-const menuConfig = ()=>{
-    let width = 768;
-    if(window.innerWidth > width){
-        hamburger.style.display = "none"
-    }else{
-        hamburger.style.display = "block"
-    }
-}
+
+
+  
+    
+
 
 
 
@@ -73,4 +70,3 @@ company.addEventListener("click", (dropCompany))
 connect.addEventListener("click", (dropConnect))
 hamburger.addEventListener("click", (displayMenu))
 close.addEventListener("click", (closeMenu))
-window.addEventListener("resize", (menuConfig))

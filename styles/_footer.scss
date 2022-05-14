@@ -1,7 +1,8 @@
 @import "./mixins";
+@import "./media";
 
 footer{
-    height: 25rem;
+    height: 40rem;
     background-color: $footer-background;
     border-top-right-radius: 8rem;
     .footer-nav{
@@ -10,10 +11,17 @@ footer{
         gap:12rem;
         padding-top:5rem;
         margin-left: 10%;
+
         .footer-nav-items{
             @include flex-row();
             justify-content: space-between;
-            width: 60%;
+            width: 45%;
+            @include respond(laptop){
+                width:10%;
+            }
+            @include respond(laptop_tablet){
+                margin-right: 123rem;
+            }
             .product-footer{
                 .product-link{
                     @include footer-link();

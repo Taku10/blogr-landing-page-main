@@ -13,6 +13,10 @@
              @include respond(laptop){
              width:50rem;   
             }
+            @include respond(laptop_tablet){
+                width: 45rem;
+                margin-top:4rem;
+            }
          }
      }
      .features{
@@ -27,6 +31,9 @@
          margin-top:10rem;
          margin-left:2rem;       
         }
+        @include respond(laptop_tablet){
+            margin-left:1rem;
+        }
          .free{
              h2{
                  @include sub-header();
@@ -38,6 +45,9 @@
                  @include respond(desktop){
                      margin-right:5rem;
                  }
+                 @include respond(laptop_tablet){
+                    margin-right:2rem;
+                }
              }
          }
          .tooling{

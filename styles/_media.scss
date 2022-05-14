@@ -14,6 +14,13 @@
             @content
         }
     }
+
+    @if($breakpoint == laptop_tablet){
+        @media (max-width:865px) and (min-width:768px){
+            @content
+        }
+    }
+
     @if($breakpoint == tablet ){
         @media (max-width:768px){
             @content
