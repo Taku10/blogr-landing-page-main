@@ -10,6 +10,13 @@ overflow-x:hidden;
     @include respond(laptop){
      margin-top:-5rem;           
     }
+    @include respond(tablet){
+        height:100rem;
+        border:1px solid;
+        margin-top:0rem;
+       
+    }
+
     h1{
         @include header();
         margin-top:12rem;
@@ -20,17 +27,36 @@ overflow-x:hidden;
         @include respond(laptop){
          font-size:2.4rem;       
         }
+        @include respond(tablet){
+            font-size:2.2rem;
+            margin-left:-2%;
+            margin-top:8rem;
+        }
     }
     .division{
         @include grid();
-        height: 100%;
+        height: 80rem;
         margin-top: 5rem;
+        @include respond(tablet){
+            @include flex-column-reverse();
+            margin-top:0rem;
+            border:1px solid blue;
+           
+        }
         .content{
             @include flex-column();
             gap:6rem;
             height:30rem;
             @include respond(laptop){
              margin-left:5%;   
+            }
+            @include respond(tablet){
+                margin-top:8rem;
+                margin-right: 4rem;
+                text-align:center;
+                margin-bottom:12rem;
+                border: 1px solid green;
+               
             }
             .content-top{
                 width:fit-content;
@@ -54,6 +80,15 @@ overflow-x:hidden;
             }
         }
         .editor-image{
+                @include respond (tablet){
+                    margin-left:2rem;
+                    border:1px solid red;
+                    position:absolute;
+                    margin-bottom:48rem;
+                    margin-left:10%;
+                    
+                    
+                }
             img{
                 position: absolute;
                 margin-left:8rem;
@@ -65,6 +100,11 @@ overflow-x:hidden;
                 @include respond(laptop){
                 width:40rem;
                 margin-top:-8rem;
+                }
+                @include respond(tablet){
+                    position: static;
+                    width:30rem;
+                    
                 }
             }
         }

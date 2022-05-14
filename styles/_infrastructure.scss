@@ -12,6 +12,10 @@
     @include respond(laptop){
      height: 20rem;           
     }
+    @include respond(tablet){
+        height: 60rem;
+        @include flex-column();
+    }
     .phones{
         img{
             position: absolute;
@@ -29,10 +33,20 @@
                 margin-left:-1rem;
                 margin-top:-1rem;
             }
+            @include respond(tablet){
+                width: 31rem;
+                margin-top:-15rem;
+                margin-left:10%;
+            }
         }
         
     }
     .infra-details{
+        @include respond(tablet){
+            border: 1px solid white;
+            margin-top:25rem;
+            height: 20rem;
+        }
         .info{
             margin-top:8rem;
             @include respond(desktop){
@@ -47,6 +61,12 @@
                 width: fit-content;
                 margin-left:-4rem;
                 margin-top:2rem;
+            }
+            @include respond(tablet){
+                border: 1px solid white;
+                width: 35rem;
+                margin-left:20%;
+                margin-top:0rem;
             }
             
             h2{

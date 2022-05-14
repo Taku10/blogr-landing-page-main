@@ -58,6 +58,12 @@
     flex-direction: column;
 }
 
+@mixin flex-column-reverse{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
 @mixin grid {
     display:grid;
     grid-template-columns:1fr 1fr;

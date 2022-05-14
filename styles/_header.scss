@@ -10,6 +10,11 @@ header {
     background-position:  20% center;
     height: 35rem;
     border-bottom-left-radius: 9rem;
+    @include respond(tablet){
+        height:100vh;
+        background-image: url("/images/bg-pattern-intro-mobile.svg"), linear-gradient(to left, $light-red, $very-light-red);
+        background-position: center center;
+    }
     nav{ 
         @include flex-row();
         justify-content: space-between;
@@ -314,6 +319,10 @@ header {
         @include respond(laptop_tablet){
             margin-left:-8rem;
         }
+        @include respond(tablet){
+            margin-left:-12rem;
+            margin-top: 10rem;
+        }
         h1{
             font-family: 'Overpass', sans-serif;
             color: white;
@@ -323,6 +332,9 @@ header {
             }
             @include respond(laptop_tablet){
                 font-size:3rem;
+            }
+            @include respond(tablet){
+                font-size:2.5rem;
             }
         }
         p{
