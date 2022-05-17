@@ -84,8 +84,8 @@ overflow-x:hidden;
                     margin-left:2rem;
                     border:1px solid red;
                     position:absolute;
-                    margin-bottom:48rem;
-                    margin-left:10%;
+                    margin-bottom:46rem;
+                    margin-left:-11%;
                     
                     
                 }
@@ -103,7 +103,8 @@ overflow-x:hidden;
                 }
                 @include respond(tablet){
                     position: static;
-                    width:30rem;
+                    width:100%;
+                    
                     
                 }
             }

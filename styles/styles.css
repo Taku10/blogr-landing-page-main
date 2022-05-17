@@ -750,8 +750,8 @@ body {
     margin-left: 2rem;
     border: 1px solid red;
     position: absolute;
-    margin-bottom: 48rem;
-    margin-left: 10%;
+    margin-bottom: 46rem;
+    margin-left: -11%;
   }
 }
 
@@ -778,7 +778,7 @@ body {
 @media (max-width: 768px) {
   .design-container .division .editor-image img {
     position: static;
-    width: 30rem;
+    width: 100%;
   }
 }
 
@@ -973,6 +973,30 @@ body {
       grid-template-columns: 1fr 1fr;
 }
 
+@media (max-width: 768px) {
+  .bottom-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: 1px solid;
+    height: 70rem;
+    margin-left: -12rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bottom-container .laptop {
+    border: 1px solid;
+    height: 30rem;
+    width: 40rem;
+    margin-left: 12rem;
+  }
+}
+
 .bottom-container .laptop img {
   position: absolute;
   margin-left: -17rem;
@@ -994,6 +1018,13 @@ body {
   .bottom-container .laptop img {
     width: 45rem;
     margin-top: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bottom-container .laptop img {
+    margin-left: 2rem;
+    width: 100%;
   }
 }
 
@@ -1026,6 +1057,23 @@ body {
 @media (max-width: 865px) and (min-width: 768px) {
   .bottom-container .features {
     margin-left: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bottom-container .features {
+    border: 1px solid;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    height: 35rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bottom-container .features .free, .bottom-container .features .tooling {
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 0%;
   }
 }
 
