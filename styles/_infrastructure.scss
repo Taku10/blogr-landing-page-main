@@ -13,8 +13,11 @@
      height: 20rem;           
     }
     @include respond(tablet){
-        height: 60rem;
+        height: 36rem;
         @include flex-column();
+        background-size:100%;
+        background-position: top;
+        
     }
     .phones{
         img{
@@ -43,9 +46,9 @@
     }
     .infra-details{
         @include respond(tablet){
-            border: 1px solid white;
             margin-top:25rem;
             height: 20rem;
+            margin-top:15rem;
         }
         .info{
             margin-top:8rem;
@@ -63,10 +66,10 @@
                 margin-top:2rem;
             }
             @include respond(tablet){
-                border: 1px solid white;
-                width: 35rem;
+                width: 26rem;
                 margin-left:20%;
                 margin-top:0rem;
+                height:20rem;
             }
             
             h2{
@@ -79,6 +82,11 @@
                 @include respond(laptop_tablet){
                     width: 15rem;
                     margin-left:12rem;
+                }
+                @include respond(tablet){
+                    font-size:2.1rem;
+                    text-align:center;
+                    margin-left: -10%;
                 }
                 
             }
@@ -98,6 +106,13 @@
                     margin-left:10rem;
                     margin-top: 1rem;
                 }
+                @include respond(tablet){
+                    text-align: center;
+                    font-size: 1.2rem;
+                    line-height: 1.5;
+                    margin-top:1rem;
+                }
+                
             }
         }
     }

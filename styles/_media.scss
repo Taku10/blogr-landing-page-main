@@ -29,6 +29,13 @@
     @if($breakpoint == phone){
         @media (max-width:500px){
             @content
+
+        }
+    }
+    @if($breakpoint == smallPhone){
+        @media (max-width:375px){
+            @content
+            
         }
     }
 }
