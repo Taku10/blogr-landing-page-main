@@ -12,7 +12,6 @@ overflow-x:hidden;
     }
     @include respond(tablet){
         height:100rem;
-        border:1px solid;
         margin-top:0rem;
        
     }
@@ -40,7 +39,6 @@ overflow-x:hidden;
         @include respond(tablet){
             @include flex-column-reverse();
             margin-top:0rem;
-            border:1px solid blue;
            
         }
         .content{
@@ -55,7 +53,7 @@ overflow-x:hidden;
                 margin-right: 4rem;
                 text-align:center;
                 margin-bottom:12rem;
-                border: 1px solid green;
+                
                
             }
             .content-top{
@@ -82,7 +80,6 @@ overflow-x:hidden;
         .editor-image{
                 @include respond (tablet){
                     margin-left:2rem;
-                    border:1px solid red;
                     position:absolute;
                     margin-bottom:46rem;
                     margin-left:-11%;

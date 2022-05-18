@@ -634,7 +634,6 @@ body {
 @media (max-width: 768px) {
   .design-container {
     height: 100rem;
-    border: 1px solid;
     margin-top: 0rem;
   }
 }
@@ -688,7 +687,6 @@ body {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     margin-top: 0rem;
-    border: 1px solid blue;
   }
 }
 
@@ -716,7 +714,6 @@ body {
     margin-right: 4rem;
     text-align: center;
     margin-bottom: 12rem;
-    border: 1px solid green;
   }
 }
 
@@ -748,7 +745,6 @@ body {
 @media (max-width: 768px) {
   .design-container .division .editor-image {
     margin-left: 2rem;
-    border: 1px solid red;
     position: absolute;
     margin-bottom: 46rem;
     margin-left: -11%;
@@ -1109,6 +1105,19 @@ footer {
   border-top-right-radius: 8rem;
 }
 
+@media (max-width: 768px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 70rem;
+  }
+}
+
 footer .footer-nav {
   height: 100%;
   display: -webkit-box;
@@ -1121,6 +1130,21 @@ footer .footer-nav {
   gap: 12rem;
   padding-top: 5rem;
   margin-left: 10%;
+}
+
+@media (max-width: 768px) {
+  footer .footer-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 footer .footer-nav .footer-nav-items {
@@ -1146,6 +1170,19 @@ footer .footer-nav .footer-nav-items {
 @media (max-width: 865px) and (min-width: 768px) {
   footer .footer-nav .footer-nav-items {
     margin-right: 123rem;
+  }
+}
+
+@media (max-width: 768px) {
+  footer .footer-nav .footer-nav-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: -4rem;
   }
 }
 

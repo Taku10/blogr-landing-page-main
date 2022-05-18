@@ -5,12 +5,21 @@ footer{
     height: 40rem;
     background-color: $footer-background;
     border-top-right-radius: 8rem;
+    @include respond(tablet){
+        @include flex-column();
+        height: 70rem;
+    }
+
     .footer-nav{
         height: 100%;
         @include flex-row;
         gap:12rem;
         padding-top:5rem;
         margin-left: 10%;
+        @include respond(tablet){
+            @include flex-column();
+            align-items:center;
+        }
 
         .footer-nav-items{
             @include flex-row();
@@ -22,12 +31,18 @@ footer{
             @include respond(laptop_tablet){
                 margin-right: 123rem;
             }
+            @include respond(tablet){
+                @include flex-column();
+                margin-top:-4rem;
+            }
+    
             .product-footer{
                 .product-link{
                     @include footer-link();
                     
                 }
                 .product-details{
+                    
                    @include details();
                    .drop-link{
                        cursor:pointer;
